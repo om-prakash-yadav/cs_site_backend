@@ -1,0 +1,10 @@
+.env
+
+*.log
+*.pot
+*.pyc
+__pycache__
+
+
+*.djangobackend/**/__pycache__
+/myenv/
