@@ -26,6 +26,13 @@ class Staff(models.Model):
   def __str__(self):
          return self.name
 
+class Feed(models.Model):
+  name = models.CharField(max_length=100)
+  link = models.CharField(max_length=5000,blank=True,default=" ")
+  date = models.DateField(default=0)
+  def __str__(self):
+         return self.name
+
 
 
 class Event(models.Model):

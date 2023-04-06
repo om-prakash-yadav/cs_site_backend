@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Faculty, Staff, Event, gallery
+from .models import Faculty, Staff, Event, gallery , Feed
 
 class FacultySerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,3 +20,8 @@ class GallerySerializer(serializers.ModelSerializer):
     class Meta:
         model = gallery
         fields = ['id', 'Image']
+
+class FeedSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Feed
+        fields = ['id', 'name','link','date']

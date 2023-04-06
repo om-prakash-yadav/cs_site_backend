@@ -1,6 +1,6 @@
 from rest_framework import generics
-from .models import Faculty, Staff, Event, gallery
-from .serializers import FacultySerializer, StaffSerializer, EventSerializer, GallerySerializer
+from .models import Faculty, Staff, Event, gallery , Feed
+from .serializers import FacultySerializer, StaffSerializer, EventSerializer, GallerySerializer , FeedSerializer
 
 
 class FacultyList(generics.ListCreateAPIView):
@@ -21,5 +21,9 @@ class EventList(generics.ListCreateAPIView):
 class GalleryList(generics.ListCreateAPIView):
     queryset = gallery.objects.all()
     serializer_class = GallerySerializer
+
+class FeedList(generics.ListCreateAPIView):
+    queryset = Feed.objects.all()
+    serializer_class = FeedSerializer
 
 
